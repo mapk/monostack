@@ -6,3 +6,4 @@ If something isn't a block yet, this theme will not have it. As each block happe
 
 # Styling just like Gutenberg
 The idea of the default look for this theme is to as closely replicate that of the Gutenberg editor output as possible. As a result the focus is on that styling not creating a new look.. yet. As things grow, we may have styles and go further into what the theme can have... who knows.
+# mono
