@@ -1,19 +1,19 @@
 /*
-Theme Name: Gutenberg
-Theme URI: https://github.com/WordPress/gutenberg-theme/
-Author: wordpressdotorg
-Author URI: https://wordpress.org
-Description: Showcasing themeing with Gutenberg.
+Theme Name: Mono
+Theme URI: https://github.com/mapk/monotheme/
+Author: Mark Uraine
+Author URI: https://markuraine.com
+Description: Mono is a Gutenberg-ready theme that brings the beauty of code editors to the frontend.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: gutenbergtheme
+Text Domain: mono
 Tags: translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-gutenbergtheme is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+mono is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -279,6 +279,21 @@ th {
 }
 
 /*--------------------------------------------------------------
+# Color variables
+--------------------------------------------------------------*/
+:root {
+  --color_background: #282A36; /* Background */
+  --color_muted:      #8492B1; /* Muted */
+  --color_text:       #f7f7f7; /* Text */
+  --color_heading:    #ffffff; /* Headings */
+  --color_blue:       #6BE5FD; /* Words: conjunctions */
+  --color_pink:       #FF79C0; /* Words: prepositions */
+  --color_green:      #50FA78; /* Words: pronouns */
+  --color_action:     #BD93F2; /* Links and buttons */
+  --color_highlight:  #363948; /* Browser selection highlight and pre/code backgrounds */
+}
+
+/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 body,
@@ -287,56 +302,104 @@ input,
 select,
 optgroup,
 textarea {
-  color: #444;
-  font-family: "Noto Serif", serif;
+  color: var(--color_text);
+  font-family: "Space Mono", "Noto Mono", "Oxygen Mono", Courier, monospace;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.8;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #32373c;
+  color: var(--color_heading);
   clear: both;
+  font-family: Consolas, "Noto Mono", "Oxygen Mono", Courier, monospace;
+  padding-top: 2rem;
+}
+
+.entry-title {
+  line-height: 1.4;
+  margin: 1rem 0;
+  padding-top: 0;
+  text-transform: uppercase;
+}
+
+article:not(:first-child) .entry-title {
+  margin-top: 3rem;
 }
 
 .entry-header h1.entry-title {
-  font-size: 2.44em;
-  line-height: 1.4;
-  margin: 1em 0;
+  font-size: 2rem;
+}
+
+.comments-title {
+  font-size: 1rem;
 }
 
 dfn, cite, em, i {
   font-style: italic;
 }
 
+.entry-content .highlight-conjunctions { 
+  color: var(--color_blue);
+}
+.entry-content .highlight-prepositions { 
+  color: var(--color_pink); 
+} 
+.entry-content .highlight-pronouns { 
+  color: var(--color_green);
+} 
+
+.entry-content blockquote p span[class^="highlight-"],
+.entry-content figure figcaption span[class^="highlight-"] {
+  color: var(--color_muted);
+}
+
 blockquote {
-  margin: 0 1.5em;
+  position: relative;
+}
+
+blockquote p { 
+  color: var(--color_muted); 
+  margin: 0;
+  padding: 0;
+  position: relative; 
+}
+blockquote p:before { 
+  content: "<!--"; 
+  position: absolute; 
+  left: -2.5rem; 
+  font-family: monospace; 
+}
+blockquote p:after { 
+  content: "-->"; 
+  display: block; 
+  font-family: monospace;  
 }
 
 address {
-  margin: 0 0 1.5em;
+  margin: 0 0 1rem;
 }
 
 pre {
-  background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  margin-bottom: 1.6em;
+  background: var(--color_highlight);
+  font-family: Consolas, "Noto Mono", "Oxygen Mono", Courier, monospace;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
   max-width: 100%;
   overflow: auto;
-  padding: 1.6em;
+  padding: 1rem !important;
 }
 
 code, kbd, tt, var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  background-color: var(--color_highlight);
+  font-family: Consolas, "Noto Mono", "Oxygen Mono", Courier, monospace;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.5rem;
 }
 
 abbr, acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted var(--color_muted);
   cursor: help;
 }
 
@@ -349,40 +412,12 @@ big {
   font-size: 125%;
 }
 
-.archive .site-header {
-	margin-bottom: 3.5em;
-}
-
-.site-title {
-	margin: .4375em 0 0;
-	font-size: 38px;
-	font-weight: bold;
-	line-height: 1.2;
-	color: #333332;
-}
-
-.site-title a {
-	text-decoration: none;
-	color: inherit;
-}
-
-.site-branding {
-	margin-bottom: 1.75em;
-}
-
-.site-description {
-	margin: .4375em 0 0;
-	font-size: 17px;
-	font-weight: inherit;
-	line-height: 1.4;
-	word-wrap: break-word;
-	color: #929292;
-}
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-html {
+html, body {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *,
@@ -393,8 +428,17 @@ html {
 }
 
 body {
-  background: #fff;
+  background: var(--color_background);
   /* Fallback for when there is no custom background color defined. */ }
+
+::selection { 
+  background: var(--color_highlight); 
+  color: var(--color_heading);
+}
+::-moz-selection { 
+  background: var(--color_highlight);
+  color: var(--color_heading);
+}
 
 blockquote, q {
   quotes: "" ""; }
@@ -404,25 +448,19 @@ blockquote, q {
 hr {
   border: 0;
   height: 1px;
-  margin-bottom: 1.5em;
+  margin-bottom: 1rem;
 }
 
-ul, ol {
-  margin: 0 0 1.5em 3em;
+ol:not(.comment-list):not(.children) { 
+  counter-reset:list-counter; 
+  list-style:none;
 }
-
-ul {
-  list-style: disc;
+ol:not(.comment-list):not(.children) li { 
+  counter-increment:list-counter; 
 }
-
-ol {
-  list-style: decimal;
-}
-
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em;
+ol:not(.comment-list):not(.children) li::before { 
+  color: var(--color_muted);
+  content:counter(list-counter) "/ ";  
 }
 
 dt {
@@ -430,7 +468,7 @@ dt {
 }
 
 dd {
-  margin: 0 1.5em 1.5em;
+  margin: 0 1rem 1rem;
 }
 
 img {
@@ -438,15 +476,16 @@ img {
   /* Make sure images are scaled correctly. */
   max-width: 100%;
   /* Adhere to container width. */
+  margin: 1rem 0;
 }
 
 figure {
-  margin: 1em 0;
+  margin: 1rem 0;
   /* Extra wide images within figure tags don't overflow the content area. */
 }
 
 table {
-  margin: 0 0 1.5em;
+  margin: 0 0 1rem;
   width: 100%;
 }
 
@@ -457,32 +496,26 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: .6em 1em .4em;
+  background: var(--color_action);
+  border: none;
+  color: var(--color_background);
+  font-family: Consolas, "Noto Mono", "Oxygen Mono", Courier, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  padding: 5px 1em;
+  position: relative;
+  text-transform: uppercase;
+  vertical-align: top;
+  height: 35px;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa;
-}
-
-button:active, button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus {
-  border-color: #aaa #bbb #bbb;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  top: -1px;
 }
 
 input[type="text"],
@@ -501,10 +534,28 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 3px;
+  background-color: var(--color_highlight);
+  border: 1px dashed var(--color_muted);
+  color: var(--color_heading);
+  padding: 0 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+  height: 35px;
 }
 
 input[type="text"]:focus,
@@ -523,15 +574,20 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  color: #111;
-}
-
-select {
-  border: 1px solid #ccc;
+  color: var(--color_heading);
 }
 
 textarea {
   width: 100%;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+}
+
+.search-form label {
+  display: inline-block;
 }
 
 /*--------------------------------------------------------------
@@ -540,16 +596,21 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-  color: #0073aa;
+a, 
+.hentry a span[class^="highlight-"] {
+  color: var(--color_action);
 }
 
-a:visited {
-  color: #333;
+a:visited, 
+.hentry a:visited span[class^="highlight-"] {
+  color: var(--color_action);
 }
 
-a:hover, a:focus, a:active {
-  color: #00a0d2;
+a:hover, a:focus, a:active,
+.hentry a:hover span[class^="highlight-"] {
+  background-color: var(--color_action);
+  color: var(--color_background);
+  text-decoration: none;
 }
 
 a:focus {
@@ -567,15 +628,14 @@ a:hover, a:active {
 	clear: both;
 	display: block;
   margin: 0 auto;
-	max-width: 636px;
-  text-align: center;
+	max-width: 600px;
 }
 
 .main-navigation ul {
 	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0; 
 }
 
 .main-navigation ul ul {
@@ -612,9 +672,21 @@ a:hover, a:active {
 	position: relative;
 }
 
+.main-navigation li.current_page_item {
+  background-color: var(--color_highlight);
+}
+
+.main-navigation li.current_page_item a {
+  text-decoration: none;
+}
+
+.main-navigation li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
 .main-navigation a {
 	display: block;
-	text-decoration: none;
 }
 
 .menu-toggle {
@@ -636,23 +708,23 @@ a:hover, a:active {
 	}
 	.main-navigation ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 
   .main-navigation a {
-    padding: 0 .5em;
+    padding: 0 1rem;
   }
 }
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-  border-bottom: 1px solid #111;
-	margin: 0 auto 60px;
-  max-width: 636px;
+  border-bottom: 1px dashed var(--color_muted);
+	margin: 0 auto 3rem;
+  max-width: 600px;
 	overflow: hidden;
-  padding-bottom: 60px;
+  padding-bottom: 3rem;
 }
 
 .nav-links {
@@ -688,15 +760,14 @@ a:hover, a:active {
 }
 
 .screen-reader-text:focus {
-  background-color: #f1f1f1;
+  background-color: var(--color_action);
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
-  color: #21759b;
+  color: var(--color_background);
   display: block;
-  font-size: 14px;
+  font-size: 0.8rem;
   font-size: 0.875rem;
-  font-weight: bold;
   height: auto;
   left: 5px;
   line-height: normal;
@@ -719,7 +790,7 @@ a:hover, a:active {
 
 .alignleft,
 .alignright {
-	max-width: 636px !important;	/* Let's work to make this !important unnecessary */
+	max-width: 600px !important;	/* Let's work to make this !important unnecessary */
 }
 
 .alignleft img,
@@ -741,13 +812,13 @@ a:hover, a:active {
 .alignleft img,
 .alignleft figcaption {
   float: left;
-  margin-right: 1.5em;
+  margin-right: 1rem;
 }
 
 .alignright img,
 .alignright figcaption {
   float: right;
-  margin-left: 1.5em;
+  margin-left: 1rem;
 }
 
 .aligncenter {
@@ -766,7 +837,7 @@ a:hover, a:active {
 }
 
 .widget {
-  margin: 0 0 1.5em;
+  margin: 0 0 1rem;
   /* Make sure select elements fit in widgets. */
 }
 
@@ -780,16 +851,78 @@ a:hover, a:active {
 #page {
   margin: 0 auto;
   max-width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+.site-header {
+  margin-bottom: 3rem;
 }
 
 .site-branding {
-  text-align: center;
-  margin: 60px 0;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 2rem 1rem;
+}
+
+.site-title {
+  color: var(--color_muted);
+  position: relative;
+}
+
+.site-title a, .site-title a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  background-color: transparent;
+}
+
+.site-description {
+  color: var(--color_muted);
+  font-weight: inherit;
+  line-height: 1.4;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.site-title:before, .site-description:before {
+  content:"// ";
+  left: -2rem;
+  position: absolute;
+}
+
+.site-main {
+  padding: 0 0 calc(5rem + 100px);
 }
 
 .site-footer {
-  margin: 1em 0;
-  opacity: 0.5;
+  bottom: 0;
+  height: 100px;
+  padding-top: 2rem;
+  position: absolute;
+  width: 100%;
+}
+
+.site-footer .site-info {
+  color: var(--color_muted);
+  margin: 0 auto;
+  position: relative;
+}
+
+.site-footer .site-info:before {
+  content:"// ";
+  left: -2rem;
+  position: absolute;
+}
+
+@media screen and (min-width: 664px) {
+  .site-branding,
+  .site-navigation {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -799,10 +932,6 @@ a:hover, a:active {
   display: block;
 }
 
-.hentry {
-  margin: 60px 0;
-}
-
 .updated:not(.published) {
   display: none;
 }
@@ -810,12 +939,12 @@ a:hover, a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0;
+  margin: 1rem 0 0;
 }
 
 .page-links {
   clear: both;
-  margin: 0 0 1.5em;
+  margin: 0 0 1rem;
 }
 
 .entry-header,
@@ -827,25 +956,24 @@ a:hover, a:active {
 .comments-area,
 .not-found .page-content,
 .search .entry-summary {
-  margin: 1.5em auto;
-  padding-left: 14px;
-  padding-right: 14px;
-  max-width: 636px;
+  margin: 1rem auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 600px;
 }
 
 .entry-header .wp-post-image {
-  margin-bottom: 1.5em;
+  margin-bottom: 1rem;
 }
 
 .entry-footer span{
-  margin-right: 1em;
+  margin-right: 1rem;
 }
 
 .entry-footer{
-  color: #aaa;
-  font-size: 90%;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #111;
+  color: var(--color_muted);
+  font-size: 0.8rem;
+  padding-bottom: 3rem;
 }
 
 @media screen and (min-width: 664px) {
@@ -864,14 +992,86 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
+## Error 404
+--------------------------------------------------------------*/
+.error404 {
+  background-color: #ff4c4c;
+  color: var(--color_background);
+}
+
+.error404 a,
+.error404 .site-description,
+.error404 .site-title,
+.error404 h1,
+.error404 .site-info {
+  color: var(--color_background);
+}
+
+/*--------------------------------------------------------------
+## Search results
+--------------------------------------------------------------*/
+.search .page-title {
+  color: var(--color_green);
+  font-family: "Space Mono", "Noto Mono", "Oxygen Mono", Courier, monospace;
+  font-size: 1rem;
+  font-weight: normal;
+  padding-top: 0;
+}
+
+/*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comment-list {
+  font-size: 0.8rem;
+  list-style: none;
+  padding: 0;
+}
+
+.comment-list li {
+  margin-top: 1rem;
+}
+
+/*.comment-list li + li {
+  padding-left: 40px;
+}*/
+
+.comment-list a {
+  text-decoration: none;
+}
+
+ol.children {
+  list-style: none;
+}
+
+.comment-author .says {
+  display: none;
+}
+
+.comment-author img {
+  float: left;
+  margin: 10px 8px 0 0;
+}
+
+.comment-author .fn {
+  font-size: 1rem;
+}
+
+.comment-content,
+.reply {
+  color: var(--color_muted);
+  padding-left: 40px;
+}
+
 .comment-content a {
   word-wrap: break-word;
 }
 
 .bypostauthor {
   display: block;
+}
+
+.comment-respond {
+  font-size: 0.8rem;
 }
 
 /*--------------------------------------------------------------
