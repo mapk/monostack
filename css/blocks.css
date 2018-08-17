@@ -42,7 +42,6 @@
 .wp-block-image figcaption {
   color: var(--color_muted);
   font-size: 0.8rem;
-  margin-top: -0.5rem;
   text-align: left;
 }
 
@@ -116,8 +115,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   border-left: none;
 }
 
-.wp-block-quote.is-large {
-  
+.wp-block-quote.is-large, .wp-block-quote.is-style-large {
+  margin: 1rem auto;
 }
 
 .wp-block-quote cite {

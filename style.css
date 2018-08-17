@@ -476,7 +476,7 @@ img {
   /* Make sure images are scaled correctly. */
   max-width: 100%;
   /* Adhere to container width. */
-  margin: 1rem 0;
+  /*margin: 1rem 0;*/
 }
 
 figure {
