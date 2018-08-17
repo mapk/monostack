@@ -638,11 +638,12 @@ a:hover, a:active {
 	display: none;
   list-style: none;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	background-color: var(--color_highlight);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
 	float: left;
 	position: absolute;
 	top: 100%;
@@ -662,7 +663,9 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+  line-height: 1.4;
+  padding: 0.5rem 1rem;
+  width: 200px;
 }
 
 .main-navigation ul li:hover > ul,
@@ -673,6 +676,17 @@ a:hover, a:active {
 
 .main-navigation li {
 	position: relative;
+}
+
+.main-navigation li:hover {
+  background-color: var(--color_action);
+  color: var(--color_background);
+  text-decoration: none;
+}
+
+.main-navigation li:hover > a {
+  color: var(--color_background);
+  text-decoration: none;
 }
 
 .main-navigation li.current_page_item {
@@ -693,7 +707,7 @@ a:hover, a:active {
 }
 
 .menu-toggle {
-  padding: 1em;
+  padding: 0 1rem;
 }
 
 @media screen and (max-width: 37.5em) {
@@ -701,8 +715,12 @@ a:hover, a:active {
 	.menu-toggle,
 	.main-navigation.toggled ul {
 		display: block;
-    margin: 0 auto;
+    margin: 0 1rem;
 	}
+
+  .main-navigation ul > li > a {
+    padding: 0.3rem 1rem;
+  }
 }
 
 @media screen and (min-width: 37.5em) {
@@ -724,10 +742,12 @@ a:hover, a:active {
 .site-main .posts-navigation,
 .site-main .post-navigation {
   border-bottom: 1px dashed var(--color_muted);
+  border-top: 1px dashed var(--color_muted);
 	margin: 0 auto 3rem;
   max-width: 600px;
 	overflow: hidden;
   padding-bottom: 3rem;
+  padding-top: 3rem;
 }
 
 .nav-links {
