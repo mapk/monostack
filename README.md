@@ -4,7 +4,7 @@ Mono is a Gutenberg-ready WordPress theme that brings the beauty of code editors
 
 ### Foundation
 
-The Mono theme is built on the [Gutenberg started theme](https://github.com/WordPress/gutenberg-starter-theme).
+The Mono theme is built on the [Gutenberg starter theme](https://github.com/WordPress/gutenberg-starter-theme).
 
 ### Font Stack
 
