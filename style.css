@@ -23,6 +23,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
+# Color variables
 # Typography
 # Elements
 # Forms
@@ -34,6 +35,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Widgets
 # Content
 	## Posts and pages
+  ## Error 404
+  ## Various page titles
 	## Comments
 # Infinite scroll
 # Media
@@ -1008,9 +1011,9 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-## Search results
+## Various page titles
 --------------------------------------------------------------*/
-.search .page-title {
+.search .page-title, .archive.category .page-title, .archive.author .page-title {
   color: var(--color_green);
   font-family: "Space Mono", "Noto Mono", "Oxygen Mono", Courier, monospace;
   font-size: 1rem;
