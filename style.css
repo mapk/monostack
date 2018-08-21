@@ -1,6 +1,6 @@
 /*
 Theme Name: Mono
-Theme URI: https://github.com/mapk/monotheme/
+Theme URI: https://github.com/mapk/mono/
 Author: Mark Uraine
 Author URI: https://markuraine.com
 Description: Mono is a Gutenberg-ready theme that brings the beauty of code editors to the frontend.
@@ -408,6 +408,10 @@ abbr, acronym {
 
 mark, ins {
   background: #fff9c0;
+  color: var(--color_background);
+  font-family: Consolas, "Noto Mono", "Oxygen Mono", Courier, monospace;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.5rem;
   text-decoration: none;
 }
 
@@ -488,8 +492,19 @@ figure {
 }
 
 table {
+  border: 1px dashed var(--color_muted);
   margin: 0 0 1rem;
   width: 100%;
+}
+
+th {
+  background-color: var(--color_highlight);
+  font-weight: normal;
+}
+
+td, th {
+  border: 1px dashed var(--color_muted);
+  padding: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -643,7 +658,7 @@ a:hover, a:active {
 
 .main-navigation ul ul {
 	background-color: var(--color_highlight);
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
 	top: 100%;
@@ -679,7 +694,7 @@ a:hover, a:active {
 }
 
 .main-navigation li:hover {
-  background-color: var(--color_action);
+  background-color: var(--color_action) !important;
   color: var(--color_background);
   text-decoration: none;
 }
@@ -890,6 +905,7 @@ a:hover, a:active {
 
 .site-title {
   color: var(--color_muted);
+  font-size: 1rem;
   position: relative;
 }
 
@@ -1022,11 +1038,21 @@ a:hover, a:active {
   color: var(--color_background);
 }
 
-.error404 a,
+.error404 .nav-menu > li > a,
+.error404 footer a,
 .error404 .site-description,
 .error404 .site-title,
 .error404 h1,
 .error404 .site-info {
+  color: var(--color_background);
+}
+
+.error404 input[type="search"] { 
+  background-color: transparent;
+  border: 1px dashed var(--color_highlight);
+}
+
+.error404 input[type="search"]::placeholder {
   color: var(--color_background);
 }
 
@@ -1134,6 +1160,12 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
   display: inline-block;
+}
+
+figcaption {
+  color: var(--color_muted);
+  font-size: 0.8rem;
+  text-align: left;
 }
 
 /*--------------------------------------------------------------

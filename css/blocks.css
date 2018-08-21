@@ -39,12 +39,6 @@
   width: 100vw;
 }
 
-.wp-block-image figcaption {
-  color: var(--color_muted);
-  font-size: 0.8rem;
-  text-align: left;
-}
-
 .wp-block-gallery:not(.components-placeholder) {
   margin: 1rem auto;
 }

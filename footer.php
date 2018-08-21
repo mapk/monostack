@@ -14,11 +14,11 @@
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
 		<?php 
-			printf( esc_html__( 'Computationally powered by' )); 
+			printf( esc_html__( 'Computationally powered by', 'mono' )); 
 		?> 
-		<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php
+		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mono' ) ); ?>"><?php
 			/* translators: %s: CMS name, i.e. WordPress. */
-			printf( esc_html__( 'WordPress' ));
+			printf( esc_html__( 'WordPress', 'mono' ));
 		?></a>
 		<span class="sep"> | </span>
 		<?php
