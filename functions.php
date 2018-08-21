@@ -89,26 +89,46 @@ if ( ! function_exists( 'mono_setup' ) ) :
 		// Add support for custom color scheme.
 		add_theme_support( 'editor-color-palette', array(
 			array(
-				'name'  => __( 'Strong Blue', 'mono' ),
-				'slug'  => 'strong-blue',
-				'color' => '#0073aa',
+				'name'  => __( 'Highlight', 'mono' ),
+				'slug'  => 'highlight',
+				'color' => '#363948',
 			),
 			array(
-				'name'  => __( 'Lighter Blue', 'mono' ),
-				'slug'  => 'lighter-blue',
-				'color' => '#229fd8',
+				'name'  => __( 'Background Grey', 'mono' ),
+				'slug'  => 'background-grey',
+				'color' => '#282A36',
 			),
 			array(
-				'name'  => __( 'Very Light Gray', 'mono' ),
-				'slug'  => 'very-light-gray',
-				'color' => '#eee',
+				'name'  => __( 'Muted', 'mono' ),
+				'slug'  => 'muted',
+				'color' => '#8492B1',
 			),
 			array(
-				'name'  => __( 'Very Dark Gray', 'mono' ),
-				'slug'  => 'very-dark-gray',
-				'color' => '#444',
+				'name'  => __( 'Light Grey', 'mono' ),
+				'slug'  => 'light-grey',
+				'color' => '#f7f7f7',
 			),
-		));
+			array(
+				'name'  => __( 'Blue', 'mono' ),
+				'slug'  => 'blue',
+				'color' => '#6BE5FD',
+			),
+			array(
+				'name'  => __( 'Pink', 'mono' ),
+				'slug'  => 'pink',
+				'color' => '#FF79C0',
+			),
+			array(
+				'name'  => __( 'Green', 'mono' ),
+				'slug'  => 'green',
+				'color' => '#50FA78',
+			),
+			array(
+				'name'  => __( 'Purple', 'mono' ),
+				'slug'  => 'purple',
+				'color' => '#BD93F2',
+			),
+		) );
 
 		/**
 		 * Register widget area.
