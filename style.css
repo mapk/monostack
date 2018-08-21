@@ -312,7 +312,6 @@ textarea {
   line-height: 1.8;
 }
 
-
 select {
   background: var(--color_highlight);
   border: 1px dashed var(--color_muted);
@@ -856,7 +855,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-
 .alignleft,
 .alignright {
 	max-width: 600px !important;	/* Let's work to make this !important unnecessary */
@@ -896,7 +894,6 @@ a:hover, a:active {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 /*--------------------------------------------------------------
 # Widgets
