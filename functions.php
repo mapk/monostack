@@ -108,7 +108,25 @@ if ( ! function_exists( 'mono_setup' ) ) :
 				'slug'  => 'very-dark-gray',
 				'color' => '#444',
 			),
-		) );
+		));
+
+		/**
+		 * Register widget area.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+		 */
+		function mono_widgets_init() {
+			register_sidebar( array(
+				'name'          => __( 'Footer Widget', 'mono' ),
+				'id'            => 'footer-sidebar',
+				'description'   => __( 'Add widgets here to appear in your footer on all pages.', 'mono' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<p class="widget-title">',
+				'after_title'   => '</p>',
+			) );
+		}
+		add_action( 'widgets_init', 'mono_widgets_init' );
 	}
 endif;
 add_action( 'after_setup_theme', 'mono_setup' );

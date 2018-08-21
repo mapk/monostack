@@ -13,9 +13,15 @@
 
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
+		<div id="footer-sidebar">
+			<?php
+				if(is_active_sidebar('footer-sidebar')) {
+					dynamic_sidebar('footer-sidebar');
+				}
+			?>
+		</div>
 		<?php
-			get_search_form();
-			printf( esc_html__( 'Computationally powered by', 'mono' )); 
+			printf('<p>'. esc_html__( 'Computationally powered by', 'mono' )); 
 		?> 
 		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mono' ) ); ?>"><?php
 			/* translators: %s: CMS name, i.e. WordPress. */
@@ -24,7 +30,7 @@
 		<span class="sep"> | </span>
 		<?php
 			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Theme: %s', 'mono' ), '<a href="https://github.com/WordPress/gutenberg-starter-theme/">Mono</a>' );
+			printf( esc_html__( 'Theme: %s', 'mono' ), '<a href="https://github.com/mapk/mono/">Mono</a>' );
 		?>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->

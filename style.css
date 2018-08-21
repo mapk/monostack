@@ -312,6 +312,13 @@ textarea {
   line-height: 1.8;
 }
 
+
+select {
+  background: var(--color_highlight);
+  border: 1px dashed var(--color_muted);
+  color: var(--color_muted);
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--color_heading);
   clear: both;
@@ -574,7 +581,6 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
   height: 35px;
-  margin-bottom: 1rem;
 }
 
 input[type="text"]:focus,
@@ -768,6 +774,11 @@ a:hover, a:active {
     flex-wrap: wrap;
   }
 
+  .main-navigation ul.nav-menu > li > a {
+    padding: 3px 1rem;
+    height: 35px;
+  }
+
   .main-navigation a {
     padding: 0 1rem;
   }
@@ -895,8 +906,9 @@ a:hover, a:active {
 }
 
 .widget {
+  border-bottom: 1px dashed var(--color_muted);
   margin: 0 0 1rem;
-  /* Make sure select elements fit in widgets. */
+  padding-bottom: 1rem;
 }
 
 .widget select {
@@ -953,13 +965,12 @@ a:hover, a:active {
 }
 
 .site-main {
-  padding: 0 0 calc(5rem + 150px);
+  padding: 0 0 calc(5rem + 100px);
 }
 
 .site-footer {
   bottom: 0;
-  height: 150px;
-  padding-top: 2rem;
+  height: 100px;
   position: absolute;
   width: 100%;
 }
@@ -970,7 +981,8 @@ a:hover, a:active {
   position: relative;
 }
 
-.site-footer .site-info:before {
+.site-footer .site-info p:before,
+.site-footer .search-form:before {
   content:"// ";
   left: -2rem;
   position: absolute;
