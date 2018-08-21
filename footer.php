@@ -13,7 +13,8 @@
 
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
-		<?php 
+		<?php
+			get_search_form();
 			printf( esc_html__( 'Computationally powered by', 'mono' )); 
 		?> 
 		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mono' ) ); ?>"><?php

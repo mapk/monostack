@@ -574,6 +574,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
   height: 35px;
+  margin-bottom: 1rem;
 }
 
 input[type="text"]:focus,
@@ -593,6 +594,25 @@ input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
   color: var(--color_heading);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="url"]::placeholder,
+input[type="password"]::placeholder,
+input[type="search"]::placeholder,
+input[type="number"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="range"]::placeholder,
+input[type="date"]::placeholder,
+input[type="month"]::placeholder,
+input[type="week"]::placeholder,
+input[type="time"]::placeholder,
+input[type="datetime"]::placeholder,
+input[type="datetime-local"]::placeholder,
+input[type="color"]::placeholder,
+textarea::placeholder {
+  color: var(--color_muted);
 }
 
 textarea {
@@ -933,12 +953,12 @@ a:hover, a:active {
 }
 
 .site-main {
-  padding: 0 0 calc(5rem + 100px);
+  padding: 0 0 calc(5rem + 150px);
 }
 
 .site-footer {
   bottom: 0;
-  height: 100px;
+  height: 150px;
   padding-top: 2rem;
   position: absolute;
   width: 100%;
