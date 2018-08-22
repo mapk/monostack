@@ -788,7 +788,7 @@ a:hover, a:active {
 .site-main .post-navigation {
   border-bottom: 1px dashed var(--color_muted);
   border-top: 1px dashed var(--color_muted);
-	margin: 0 auto 3rem;
+	margin: 3rem auto;
   max-width: 600px;
 	overflow: hidden;
   padding-bottom: 3rem;
@@ -1032,6 +1032,11 @@ a:hover, a:active {
 
 .entry-header .wp-post-image {
   margin-bottom: 1rem;
+}
+
+.entry-header .posted-on {
+  color: var(--color_muted);
+  font-size: 0.8rem;
 }
 
 .entry-footer span{
