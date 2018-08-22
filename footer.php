@@ -13,13 +13,13 @@
 
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
-		<div id="footer-sidebar">
-			<?php
-				if(is_active_sidebar('footer-sidebar')) {
-					dynamic_sidebar('footer-sidebar');
-				}
-			?>
-		</div>
+		<?php
+            if(is_active_sidebar('footer-sidebar')) {
+                echo '<div id="footer-sidebar">';
+                dynamic_sidebar("footer-sidebar");
+                echo '</div>';
+            }
+        ?>
 		<?php
 			printf('<p>'. esc_html__( 'Computationally powered by', 'mono' )); 
 		?> 
