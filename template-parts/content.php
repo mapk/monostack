@@ -52,8 +52,6 @@
 	<footer class="entry-footer">
 		<?php mono_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-
-	<?php else : ?>
 	<?php endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
