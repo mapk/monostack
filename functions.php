@@ -205,7 +205,7 @@ function mono_scripts() {
 	wp_enqueue_script( 'mono-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	
 	if ( !is_404() ) {
-		wp_enqueue_script( 'mono-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20180816', true );
+		wp_enqueue_script( 'mono-syntax-highlighting', get_template_directory_uri() . '/js/syntax-highlighting.js', array(), '20180816', true );
 	}
 
 	wp_enqueue_script( 'mono-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
