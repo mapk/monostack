@@ -31,6 +31,10 @@ Based on [Underscores](http:underscores.me/) and the [Gutenberg Starter Theme](h
 
 Mono includes support for Infinite Scroll in Jetpack. It also works best with the Gutenberg plugin.
 
+= Is there a problem with IE 11? =
+
+Yes. I use CSS variables which are not supported in IE. I also use ES6 (ie. arrow functions and includes) which are also not supported in IE.
+
 == Changelog ==
 
 = 1.0 =
