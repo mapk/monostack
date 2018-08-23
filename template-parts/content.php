@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package mono
+ * @package monostack
  */
 
 ?>
@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php mono_posted_on(); ?>
+			<?php monostack_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -32,7 +32,7 @@
 			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'mono' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'monostack' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -43,14 +43,14 @@
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mono' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'monostack' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php mono_entry_footer(); ?>
+		<?php monostack_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 	<?php endif; ?>
 

@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package mono
+ * @package monostack
  */
 
 get_header(); ?>

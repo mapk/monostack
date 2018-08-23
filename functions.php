@@ -1,13 +1,13 @@
 <?php
 /**
- * mono functions and definitions
+ * monostack functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package mono
+ * @package monostack
  */
 
-if ( ! function_exists( 'mono_setup' ) ) :
+if ( ! function_exists( 'monostack_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'mono_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function mono_setup() {
+	function monostack_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on mono, use a find and replace
-		 * to change 'mono' to the name of your theme in all the template files.
+		 * If you're building a theme based on monostack, use a find and replace
+		 * to change 'monostack' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'mono', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'monostack', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ if ( ! function_exists( 'mono_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'mono' ),
+			'menu-1' => esc_html__( 'Primary', 'monostack' ),
 		) );
 
 		/*
@@ -89,42 +89,42 @@ if ( ! function_exists( 'mono_setup' ) ) :
 		// Add support for custom color scheme.
 		add_theme_support( 'editor-color-palette', array(
 			array(
-				'name'  => __( 'Highlight', 'mono' ),
+				'name'  => __( 'Highlight', 'monostack' ),
 				'slug'  => 'highlight',
 				'color' => '#363948',
 			),
 			array(
-				'name'  => __( 'Background Grey', 'mono' ),
+				'name'  => __( 'Background Grey', 'monostack' ),
 				'slug'  => 'background-grey',
 				'color' => '#282A36',
 			),
 			array(
-				'name'  => __( 'Muted', 'mono' ),
+				'name'  => __( 'Muted', 'monostack' ),
 				'slug'  => 'muted',
 				'color' => '#8492B1',
 			),
 			array(
-				'name'  => __( 'Light Grey', 'mono' ),
+				'name'  => __( 'Light Grey', 'monostack' ),
 				'slug'  => 'light-grey',
 				'color' => '#f7f7f7',
 			),
 			array(
-				'name'  => __( 'Blue', 'mono' ),
+				'name'  => __( 'Blue', 'monostack' ),
 				'slug'  => 'blue',
 				'color' => '#6BE5FD',
 			),
 			array(
-				'name'  => __( 'Pink', 'mono' ),
+				'name'  => __( 'Pink', 'monostack' ),
 				'slug'  => 'pink',
 				'color' => '#FF79C0',
 			),
 			array(
-				'name'  => __( 'Green', 'mono' ),
+				'name'  => __( 'Green', 'monostack' ),
 				'slug'  => 'green',
 				'color' => '#50FA78',
 			),
 			array(
-				'name'  => __( 'Purple', 'mono' ),
+				'name'  => __( 'Purple', 'monostack' ),
 				'slug'  => 'purple',
 				'color' => '#BD93F2',
 			),
@@ -135,21 +135,21 @@ if ( ! function_exists( 'mono_setup' ) ) :
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
 		 */
-		function mono_widgets_init() {
+		function monostack_widgets_init() {
 			register_sidebar( array(
-				'name'          => __( 'Footer Widget', 'mono' ),
+				'name'          => __( 'Footer Widget', 'monostack' ),
 				'id'            => 'footer-sidebar',
-				'description'   => __( 'Add widgets here to appear in your footer on all pages.', 'mono' ),
+				'description'   => __( 'Add widgets here to appear in your footer on all pages.', 'monostack' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<p class="widget-title">',
 				'after_title'   => '</p>',
 			) );
 		}
-		add_action( 'widgets_init', 'mono_widgets_init' );
+		add_action( 'widgets_init', 'monostack_widgets_init' );
 	}
 endif;
-add_action( 'after_setup_theme', 'mono_setup' );
+add_action( 'after_setup_theme', 'monostack_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -158,15 +158,15 @@ add_action( 'after_setup_theme', 'mono_setup' );
  *
  * @global int $content_width
  */
-function mono_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'mono_content_width', 640 );
+function monostack_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'monostack_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'mono_content_width', 0 );
+add_action( 'after_setup_theme', 'monostack_content_width', 0 );
 
 /**
  * Register Google Fonts
  */
-function mono_fonts_url() {
+function monostack_fonts_url() {
 	$fonts_url = '';
 
 	/*
@@ -174,7 +174,7 @@ function mono_fonts_url() {
 	 * supported by Noto Serif, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'mono' );
+	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'monostack' );
 
 	if ( 'off' !== $notoserif ) {
 		$font_families = array();
@@ -195,26 +195,26 @@ function mono_fonts_url() {
 /**
  * Enqueue scripts and styles.
  */
-function mono_scripts() {
+function monostack_scripts() {
 	wp_enqueue_style( 'gutenbergbase-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'monoblocks-style', get_template_directory_uri() . '/css/blocks.css' );
+	wp_enqueue_style( 'monostackblocks-style', get_template_directory_uri() . '/css/blocks.css' );
 
-	wp_enqueue_style( 'mono-fonts', mono_fonts_url() );
+	wp_enqueue_style( 'monostack-fonts', monostack_fonts_url() );
 
-	wp_enqueue_script( 'mono-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'monostack-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	
 	if ( !is_404() ) {
-		wp_enqueue_script( 'mono-syntax-highlighting', get_template_directory_uri() . '/js/syntax-highlighting.js', array(), '20180816', true );
+		wp_enqueue_script( 'monostack-syntax-highlighting', get_template_directory_uri() . '/js/syntax-highlighting.js', array(), '20180816', true );
 	}
 
-	wp_enqueue_script( 'mono-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'monostack-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'mono_scripts' );
+add_action( 'wp_enqueue_scripts', 'monostack_scripts' );
 
 /**
  * Implement the Custom Header feature.

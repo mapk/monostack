@@ -1,10 +1,10 @@
-# Mono theme
+# Monostack theme
 
-Mono is a Gutenberg-ready WordPress theme that brings the beauty of code editors to the frontend. It works great with Gutenberg blocks!
+Monostack is a Gutenberg-ready WordPress theme that brings the beauty of code editors to the frontend. With a strong focus on typography and color, Monostack highlights specific grammar much like syntax highlighting does in code editors. Monostack is named after the "monospace" font stacks used throughout the theme.
 
 ### Foundation
 
-The Mono theme is built on the [Gutenberg starter theme](https://github.com/WordPress/gutenberg-starter-theme).
+The Monostack theme is built on the [Gutenberg starter theme](https://github.com/WordPress/gutenberg-starter-theme).
 
 ### Font Stack
 
@@ -27,10 +27,10 @@ pre, code {
 ```
 ### Syntax Highlighting
 
-Mono uses syntax highlighting to pop certain grammar from the English language. 
+Monostack uses syntax highlighting to pop certain grammar from the English language. 
 
 * Blue words are conjunctions
 * Pink words are prepositions
 * Green words are pronouns
 
-![Image of Mono](https://cldup.com/tlfGtP-4M1.png)
+![Image of Monostack](https://cldup.com/sNkM_BJyoP.png)

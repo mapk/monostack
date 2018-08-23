@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package mono
+ * @package monostack
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses mono_header_style()
+ * @uses monostack_header_style()
  */
-function mono_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'mono_custom_header_args', array(
+function monostack_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'monostack_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'mono_header_style',
+		'wp-head-callback'       => 'monostack_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'mono_custom_header_setup' );
+add_action( 'after_setup_theme', 'monostack_custom_header_setup' );
 
-if ( ! function_exists( 'mono_header_style' ) ) :
+if ( ! function_exists( 'monostack_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see mono_custom_header_setup().
+	 * @see monostack_custom_header_setup().
 	 */
-	function mono_header_style() {
+	function monostack_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

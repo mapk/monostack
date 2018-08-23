@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package mono
+ * @package monostack
  */
 
 ?>
@@ -19,7 +19,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mono' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'monostack' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -28,7 +28,7 @@
 	<?php edit_post_link(
         sprintf(
             /* translators: %s: Name of current post */
-            esc_html__( 'Edit %s', 'mono' ),
+            esc_html__( 'Edit %s', 'monostack' ),
             the_title( '<span class="screen-reader-text">"', '"</span>', false )
         ),
         '<footer class="entry-footer"><span class="edit-link">',

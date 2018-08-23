@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package mono
+ * @package monostack
  */
 
 ?>
@@ -21,16 +21,16 @@
             }
         ?>
 		<?php
-			printf('<p>'. esc_html__( 'Computationally powered by', 'mono' )); 
+			printf('<p>'. esc_html__( 'Computationally powered by', 'monostack' )); 
 		?> 
-		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mono' ) ); ?>"><?php
+		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'monostack' ) ); ?>"><?php
 			/* translators: %s: CMS name, i.e. WordPress. */
-			printf( esc_html__( 'WordPress', 'mono' ));
+			printf( esc_html__( 'WordPress', 'monostack' ));
 		?></a>
 		<span class="sep"> | </span>
 		<?php
 			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Theme: %s', 'mono' ), '<a href="https://github.com/mapk/mono/">Mono</a>' );
+			printf( esc_html__( 'Theme: %s', 'monostack' ), '<a href="https://github.com/mapk/monostack/">Monostack</a>' );
 		?>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->

@@ -1,4 +1,4 @@
-=== Mono ===
+=== Monostack ===
 
 Contributors: mapk
 Tags: blog, translation-ready, custom-logo, footer-widgets, threaded-comments, one-column, responsive-layout 
@@ -11,9 +11,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Mono is a Gutenberg-ready WordPress theme that brings the beauty of code editors to the frontend. With a strong focus on typography and color, Mono highlights specific grammar much like syntax highlighting does in code editors. Mono is named after the "monospace" fonts used throughout the theme.
+Monostack is a Gutenberg-ready WordPress theme that brings the beauty of code editors to the frontend. With a strong focus on typography and color, Monostack highlights specific grammar much like syntax highlighting does in code editors. Monostack is named after the "monospace" font stack used throughout the theme.
 
-Based on [Underscores](http:underscores.me/) and the [Gutenberg Starter Theme](https://github.com/WordPress/gutenberg-starter-theme), Mono is designed and further developed by [Mark Uraine](https://markuraine.com/) 
+Based on [Underscores](http:underscores.me/) and the [Gutenberg Starter Theme](https://github.com/WordPress/gutenberg-starter-theme), Monostack is designed and further developed by [Mark Uraine](https://markuraine.com/) 
 
 == Installation ==
 
@@ -25,11 +25,11 @@ Based on [Underscores](http:underscores.me/) and the [Gutenberg Starter Theme](h
 
 = What does "Gutenberg-ready" mean? =
 
-"Gutenberg-ready" is a way to indicate that this theme supports the Gutenberg plugin and the usage of blocks in the new editor. There are no sidebars in this theme and widgets are not recommended since they will all eventually be blocks anyways. Mono takes advantage of the 100% width layout for Gutenberg blocks to work correctly.
+"Gutenberg-ready" is a way to indicate that this theme supports the Gutenberg plugin and the usage of blocks in the new editor. There are no sidebars in this theme and widgets are not recommended since they will all eventually be blocks anyways. Monostack takes advantage of the 100% width layout for Gutenberg blocks to work correctly.
 
 = Does this theme support any plugins? =
 
-Mono includes support for Infinite Scroll in Jetpack. It also works best with the Gutenberg plugin.
+Monostack includes support for Infinite Scroll in Jetpack. It also works best with the Gutenberg plugin.
 
 = Is there a problem with IE 11? =
 
