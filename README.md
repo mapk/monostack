@@ -33,4 +33,4 @@ Mono uses syntax highlighting to pop certain grammar from the English language.
 * Pink words are prepositions
 * Green words are pronouns
 
-![Image of Mono](https://cldup.com/t5tH79c01j.png)
+![Image of Mono](https://cldup.com/tlfGtP-4M1.png)
