@@ -28,7 +28,7 @@
 	<?php edit_post_link(
         sprintf(
             /* translators: %s: Name of current post */
-            esc_html__( 'Edit %s', '_s' ),
+            esc_html__( 'Edit %s', 'mono' ),
             the_title( '<span class="screen-reader-text">"', '"</span>', false )
         ),
         '<footer class="entry-footer"><span class="edit-link">',
