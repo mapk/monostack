@@ -1,7 +1,7 @@
 === Monostack ===
 
 Contributors: mapk
-Tags: blog, translation-ready, custom-logo, footer-widgets, threaded-comments, one-column, responsive-layout 
+Tags: blog, translation-ready, custom-logo, footer-widgets, threaded-comments, one-column 
 
 Requires at least: 4.0
 Tested up to: 4.9
