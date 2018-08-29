@@ -5,7 +5,7 @@ Tags: blog, translation-ready, custom-logo, footer-widgets, threaded-comments, o
 
 Requires at least: 4.0
 Tested up to: 4.9
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GNU General Public License v2 (GPLv2) or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,9 @@ Monostack includes support for Infinite Scroll in Jetpack. It also works best wi
 Yes. I use CSS variables which are not supported in IE. I also use ES6 (ie. arrow functions and includes) which are also not supported in IE.
 
 == Changelog ==
+
+= 1.0.2 =
+* Updated CSS adding styling to all Gutenberg default blocks.
 
 = 1.0.1 =
 * Updated screenshot.png to align with WordPress.org guidelines.
