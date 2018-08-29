@@ -4,7 +4,7 @@ Theme URI: https://github.com/mapk/monostack/
 Author: Mark Uraine
 Author URI: https://markuraine.com
 Description: Monostack is a Gutenberg-ready WordPress theme that brings the beauty of code editors to the frontend. With a strong focus on typography and color, Monostack highlights specific grammar much like syntax highlighting does in code editors. Monostack is named after the "monospace" font stacks used throughout the theme.
-Version: 1.0.0
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: monostack
@@ -375,14 +375,16 @@ blockquote p {
 }
 blockquote p:before { 
   content: "<!--"; 
-  position: absolute; 
-  left: -2.5rem; 
-  font-family: monospace; 
+  font-family: monospace;
+  font-size: 13px;
+  left: -2.5rem;
+  position: absolute;
 }
 blockquote p:after { 
-  content: "-->"; 
-  display: block; 
-  font-family: monospace;  
+  content: "-->";
+  display: block;
+  font-family: monospace;
+  font-size: 13px;
 }
 
 address {
@@ -464,16 +466,18 @@ hr {
   margin-bottom: 1rem;
 }
 
-ol:not(.comment-list):not(.children) { 
+ol:not(.comment-list):not(.children):not(.wp-block-latest-comments) { 
   counter-reset:list-counter; 
   list-style:none;
+  text-indent: -1.4rem;
 }
-ol:not(.comment-list):not(.children) li { 
+ol:not(.comment-list):not(.children):not(.wp-block-latest-comments) li { 
   counter-increment:list-counter; 
 }
-ol:not(.comment-list):not(.children) li::before { 
+ol:not(.comment-list):not(.children):not(.wp-block-latest-comments) li::before { 
   color: var(--color_muted);
-  content:counter(list-counter) "/ ";  
+  content:counter(list-counter) "/ ";
+  font-size: 0.8rem; 
 }
 
 dt {
