@@ -94,8 +94,8 @@ if ( ! function_exists( 'monostack_setup' ) ) :
 				'color' => '#363948',
 			),
 			array(
-				'name'  => __( 'Background Grey', 'monostack' ),
-				'slug'  => 'background-grey',
+				'name'  => __( 'Dark Grey', 'monostack' ),
+				'slug'  => 'dark-grey',
 				'color' => '#282A36',
 			),
 			array(

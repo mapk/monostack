@@ -653,8 +653,10 @@ a:visited,
   color: var(--color_action);
 }
 
-a:hover, a:focus, a:active,
-.hentry a:hover span[class^="highlight-"] {
+a:not(.has-text-color):not(.has-background):hover, 
+a:not(.has-text-color):not(.has-background):focus, 
+a:not(.has-text-color):not(.has-background):active,
+.hentry a:not(.has-text-color):not(.has-background):hover span[class^="highlight-"] {
   background-color: var(--color_action);
   color: var(--color_background);
   text-decoration: none;
