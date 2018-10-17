@@ -140,23 +140,20 @@ msgid "_s"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
+msgid "https://github.com/mapk/monostack"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if "
-"you like. I'm a theme meant for hacking so don't use me as a <em>Parent "
-"Theme</em>. Instead try turning me into the next, most awesome, WordPress "
-"theme out there. That's what I'm here for."
+"Monostack is a Gutenberg-ready WordPress theme that brings the beauty of code editors to the frontend. With a strong focus on typography and color, Monostack highlights specific grammar much like syntax highlighting does in code editors. Monostack is named after the monospace font stacks used throughout the theme."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Automattic"
+msgid "Mark Uraine"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://automattic.com/"
+msgid "http://markuraine.com"
 msgstr ""
 
 #: comments.php:40
