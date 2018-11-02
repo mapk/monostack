@@ -9,7 +9,7 @@
 	
 	function preg_quote (str, delimiter) {
 		// @see http://locutus.io/php/preg_quote/
-	  return ( str + '' ).replace( new RegExp( '[.\\\\+*?\\[\\^\\]$(){}=!<>|:\\' + ( delimiter || '' ) + '-]', 'g'), '\\$&' );
+		return ( str + '' ).replace( new RegExp( '[.\\\\+*?\\[\\^\\]$(){}=!<>|:\\' + ( delimiter || '' ) + '-]', 'g'), '\\$&' );
 	}
 	
 	function valuesToRegex( arr ) {
