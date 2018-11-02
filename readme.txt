@@ -13,7 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Monostack is a Gutenberg-ready WordPress theme that brings the beauty of code editors to the frontend. With a strong focus on typography and color, Monostack highlights specific grammar much like syntax highlighting does in code editors. Monostack is named after the "monospace" font stack used throughout the theme.
 
-Based on [Underscores](http:underscores.me/) and the [Gutenberg Starter Theme](https://github.com/WordPress/gutenberg-starter-theme), Monostack is designed and further developed by [Mark Uraine](https://markuraine.com/) 
+Based on [Underscores](http:underscores.me/) and the [Gutenberg Starter Theme](https://github.com/WordPress/gutenberg-starter-theme) which uses the [GPL 2 License](https://github.com/WordPress/gutenberg-starter-theme/blob/master/LICENSE), Monostack is designed and further developed by [Mark Uraine](https://markuraine.com/) 
 
 == Installation ==
 
