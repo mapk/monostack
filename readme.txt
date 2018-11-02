@@ -5,7 +5,7 @@ Tags: blog, translation-ready, custom-logo, footer-widgets, threaded-comments, o
 
 Requires at least: 4.0
 Tested up to: 4.9
-Stable tag: 1.2.1
+Stable tag: 2
 License: GNU General Public License v2 (GPLv2) or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,9 @@ Monostack includes support for Infinite Scroll in Jetpack. It also works best wi
 Yes. I use CSS variables which are not supported in IE. I also use ES6 (ie. arrow functions and includes) which are also not supported in IE.
 
 == Changelog ==
+
+= 2.0 =
+* A big version jump due to a refactor of the syntax highlighting code. Using regex now and adapted fully for translations. There is still a minor issue with text at the end of sentences not being highlighted.
 
 = 1.2.1 =
 * Removed the rtl.css file since I'm not using it.
