@@ -5,7 +5,7 @@ Tags: blog, translation-ready, custom-logo, footer-widgets, threaded-comments, o
 
 Requires at least: 4.0
 Tested up to: 4.9
-Stable tag: 2
+Stable tag: 2.0.1
 License: GNU General Public License v2 (GPLv2) or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Monostack is a Gutenberg-ready WordPress theme that brings the beauty of code editors to the frontend. With a strong focus on typography and color, Monostack highlights specific grammar much like syntax highlighting does in code editors. Monostack is named after the "monospace" font stack used throughout the theme.
 
-Based on [Underscores](http:underscores.me/) and the [Gutenberg Starter Theme](https://github.com/WordPress/gutenberg-starter-theme) which uses the [GPL 2 License](https://github.com/WordPress/gutenberg-starter-theme/blob/master/LICENSE), Monostack is designed and further developed by [Mark Uraine](https://markuraine.com/) 
+Based on [Underscores](http:underscores.me/) and the [Gutenberg Starter Theme](https://github.com/WordPress/gutenberg-starter-theme) which uses the [GPL 2 License](https://github.com/WordPress/gutenberg-starter-theme/blob/master/LICENSE), Monostack is designed and further developed by [Mark Uraine](https://markuraine.com/) and [Ernesto Mendez](https://profiles.wordpress.org/mendezcode/).
 
 == Installation ==
 
@@ -36,6 +36,9 @@ Monostack includes support for Infinite Scroll in Jetpack. It also works best wi
 Yes. I use CSS variables which are not supported in IE. I also use ES6 (ie. arrow functions and includes) which are also not supported in IE.
 
 == Changelog ==
+
+= 2.0.1 =
+* Added Ernesto Mendez to the readme.txt file for his excellent dev work.
 
 = 2.0 =
 * A big version jump due to a refactor of the syntax highlighting code. Using regex now and adapted fully for translations. There is still a minor issue with text at the end of sentences not being highlighted.
