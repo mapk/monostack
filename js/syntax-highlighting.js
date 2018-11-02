@@ -32,6 +32,6 @@
 	document.querySelectorAll( '.hentry .entry-content' ).forEach( content => {
 		content.querySelectorAll( '*' ).forEach( highlight );
 		highlight( content );
-	} )
+	} );
 
 } ).call( this );
