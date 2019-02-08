@@ -946,7 +946,12 @@ a:hover, a:active {
 
 .site-title {
   color: var(--color_muted);
+  font-family: "Space Mono", "Noto Mono", "Oxygen Mono", Courier, monospace;
   font-size: 1rem;
+  font-weight: inherit;
+  line-height: 1.8;
+  margin: 1rem auto;
+  padding: 0;
   position: relative;
 }
 
