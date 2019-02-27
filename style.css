@@ -1033,6 +1033,7 @@ a:hover, a:active {
 }
 
 .entry-header,
+.entry-header + p,
 .page-header,
 .entry-footer,
 .site-info,
@@ -1068,6 +1069,7 @@ a:hover, a:active {
 
 @media screen and (min-width: 664px) {
   .entry-header,
+  .entry-header + p,
   .page-header,
   .entry-footer,
   .site-info,
