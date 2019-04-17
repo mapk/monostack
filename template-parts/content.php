@@ -25,7 +25,7 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
-
+	
 	<?php if ( is_single() ) : // Hiding the excerpt from archive list views ?>
 	<div class="entry-content">
 		<?php
