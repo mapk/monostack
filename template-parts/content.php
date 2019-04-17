@@ -52,6 +52,9 @@
 	<footer class="entry-footer">
 		<?php monostack_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-	<?php endif; ?>
+	
+	<?php elseif( has_excerpt() ) : 
+		echo '<p>' . get_the_excerpt() . '</p>';
+	endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

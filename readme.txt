@@ -4,8 +4,8 @@ Contributors: mapk
 Tags: blog, translation-ready, custom-background, custom-colors, custom-logo, footer-widgets, full-width-template, rtl-language-support, threaded-comments, one-column
 
 Requires at least: 4.0
-Tested up to: 5.0
-Stable tag: 2.0.3
+Tested up to: 5.1
+Stable tag: 2.0.4
 License: GNU General Public License v2 (GPLv2) or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,9 @@ Monostack includes support for Infinite Scroll in Jetpack. It also works best wi
 Yes. I use CSS variables which are not supported in IE. I also use ES6 (ie. arrow functions and includes) which are also not supported in IE.
 
 == Changelog ==
+
+= 2.0.4 =
+* Added the ability to use custom excerpts.
 
 = 2.0.3 =
 * Updated the .site-title styles so that it displays correctly across all screens.
